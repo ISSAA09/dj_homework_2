@@ -6,11 +6,11 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         Category.objects.all().delete()
         category_list = [
-            {'name': 'Овощи', 'text': ''},
-            {'name': 'Фрукты', 'text': ''},
-            {'name': 'Крупы', 'text': ''},
-            {'name': 'Кондитерские изделия', 'text': ''},
-            {'name': 'Напитки', 'text': ''}
+            {'pk': 1, 'name': 'Овощи', 'text': ''},
+            {'pk': 2, 'name': 'Фрукты', 'text': ''},
+            {'pk': 3, 'name': 'Крупы', 'text': ''},
+            {'pk': 4, 'name': 'Кондитерские изделия', 'text': ''},
+            {'pk': 5, 'name': 'Напитки', 'text': ''}
         ]
         category_for_create = []
         for category_item in category_list:
